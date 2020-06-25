@@ -50,3 +50,14 @@ Selector labels
 app.kubernetes.io/name: {{ include "pypiServer.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
+
+{{/*
+Create the name of the service account to use
+*/}}
+{{- define "pypiServer.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create }}
+{{- default (include "pypiServer.fullname" .) .Values.serviceAccount.name }}
+{{- else }}
+{{- default "default" .Values.serviceAccount.name }}
+{{- end }}
+{{- end }}

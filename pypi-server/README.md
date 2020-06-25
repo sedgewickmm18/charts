@@ -77,6 +77,9 @@ The following tables lists the configurable parameters of the PyPI server chart 
 | `autoscaling.maxReplicas`                       | Maximum replicas                                                                         | `10`                    |
 | `autoscaling.targetCPUUtilizationPercentage`    | CPU usage percentage threshold for autoscaling                                           | `80`                    |
 | `autoscaling.targetMemoryUtilizationPercentage` | Memory usage percentage threshold for autoscaling                                        | `nil`                   |
+| `serviceAccount.create`                         | Flag to create a serviceAccount                                                          | `true`                  |
+| `serviceAccount.annotations`                    | ServiceAccount annotations                                                               | `true`                  |
+| `serviceAccount.name`                           | ServiceAccount name                                                                      | `""`                    |
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install` or build your own config based on the `values.yaml` and pass the path via `--set-file <path to file>`
 

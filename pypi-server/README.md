@@ -78,3 +78,6 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 ## Affinity Details
 The default affinity will be to prefer not sharing a node with pods of the same statefulset. This is to maximize availability should a node fail. Setting the `pod.affinity` parameter will override these settings.
+
+## TODO
+ - [ ] Add support for custom index.html

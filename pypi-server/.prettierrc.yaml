@@ -1,0 +1,5 @@
+overrides:
+  - files:
+      - "*.yaml"
+    options:
+      tabWidth: 2

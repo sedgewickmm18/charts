@@ -2,9 +2,13 @@
 
 This chart installs a PyPI server as a StatefulSet with a shared Persistent Volume across replicas.
 
+## Features
+- Optional Autoscaling
+- Optional Ingress
+- Shared `ReadWriteMany` Persistent Volume
+
 ## Prerequisites Details
 
-- Kubernetes 1.6+
 - Persistent Volume `ReadWriteMany` support for default storageClass or specified by `persistence.storageClassName`
 - Ingress plugin: Required if `ingress.enabled`
 
@@ -80,4 +84,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 The default affinity will be to prefer not sharing a node with pods of the same statefulset. This is to maximize availability should a node fail. Setting the `pod.affinity` parameter will override these settings.
 
 ## TODO
- - [ ] Add support for custom index.html
+- [ ] Add support for custom index.html
+
+ ## Honorable Mention
+- Lots of props to https://github.com/owkin/charts/tree/master/pypiserver

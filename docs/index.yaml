@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  pypi-server:
+  - apiVersion: v2
+    appVersion: 1.3.2
+    created: "2020-06-29T01:05:19.353676265Z"
+    description: A high availablility, persistent, auto-scaling pypi-server application.
+    digest: c62b26563b6a069c794c4d1c984c84d8ec3a7969b2d131a28975526c959bd170
+    home: https://github.com/cgsimmons/charts/tree/master/pypi-server
+    icon: https://cgsimmons.github.io/charts/icons/pypi-server.svg
+    keywords:
+    - pypi
+    - python
+    maintainers:
+    - email: chris.simmons.alt@gmail.com
+      name: Chris Simmons
+      url: https://www.cgsimmons.dev
+    name: pypi-server
+    sources:
+    - https://github.com/cgsimmons/charts/tree/master/pypi-server
+    - https://github.com/pypiserver/pypiserver
+    type: application
+    urls:
+    - pypi-server-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-06-29T01:05:19.352884233Z"

@@ -89,5 +89,5 @@ The default affinity will be to prefer not sharing a node with pods of the same 
 ## TODO
 - [ ] Add support for custom index.html
 
- ## Honorable Mention
+## Honorable Mention
 - Lots of props to https://github.com/owkin/charts/tree/master/pypiserver

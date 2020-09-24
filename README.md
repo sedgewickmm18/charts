@@ -9,5 +9,5 @@ Just a small collection of charts I have found helpful. Enjoy!
 - run `build.sh`
 
 ## Registered Repositories
-- (Helm Hub)[https://hub.helm.sh/charts/cgsimmons]
-- (Artifact Hub)[https://artifacthub.io/packages/search?repo=cgsimmons]
+- [Helm Hub](https://hub.helm.sh/charts/cgsimmons)
+- [Artifact Hub](https://artifacthub.io/packages/search?repo=cgsimmons)

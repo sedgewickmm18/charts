@@ -1,0 +1,5 @@
+# Artifact Hub repository metadata file
+repositoryID: 1c09a660-ad68-4aec-b2cf-3b5ad61a9f80
+owners: # (optional, used to claim repository ownership)
+  - name: Chris Simmons
+    email: chris.simmons.alt@gmail.com

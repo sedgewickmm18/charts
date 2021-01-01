@@ -65,7 +65,7 @@ The following tables lists the configurable parameters of the PyPI server chart 
 | `ingress.hosts`                                 | Ingress hosts                                                                            | `[]`                    |
 | `ingress.tls`                                   | Ingress TLS configuration                                                                | `[]`                    |
 | `server.extraArgs`                              | Additional arguments (beside -P, -p, -a) to be passed to the underyling pypiserver image | `[]`                    |
-| `auth.actions`                                  | Actions requiring authentication (comma separated list)                                  | `list,download,update`  |
+| `auth.actions`                                  | Actions requiring authentication (comma separated list), `.` dislables all auth          | `list,download,update`  |
 | `auth.credentials`                              | Map of username / encoded password to write in a htpasswd (if not provided)              | `{admin: admin}`        |
 | `auth.secretName`                               | A secret containing auth credentials as an alternative to passing auth.credentials       | `nil`                   |
 | `auth.secretKey`                                | The secret key containing the auth credentials                                           | `auth`                  |

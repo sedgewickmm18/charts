@@ -1,6 +1,6 @@
 apiVersion: v2
 name: pypi-server
-version: 0.1.0
+version: 0.2.0
 description: A high availablility, persistent, auto-scaling pypi-server application.
 icon: https://cgsimmons.github.io/charts/icons/pypi-server.svg
 type: application
@@ -15,4 +15,4 @@ maintainers:
   - name: Chris Simmons
     email: chris.simmons.alt@gmail.com
     url: https://www.cgsimmons.dev
-appVersion: 1.3.2
+appVersion: 1.4.2

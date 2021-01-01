@@ -54,7 +54,8 @@ persistence:
 
 auth:
   ## comma-separated list of (case-insensitive) actions to authenticate
-  ## Use '.' or '' for empty. Requires to have set the password (option below).
+  ## Use '.' to disable all authentication and credentials
+  ## Requires auth.credentials or auth.secretName when set (options below) 
   ## Available actions are update, download and list
   actions: list,download,update
   ## Map of username / encoded passwords that will be put to the htpasswd file
@@ -63,13 +64,13 @@ auth:
     admin: admin
   }
   ## A secret with htpasswd data my be provided instead of credentials by passing
-  ## the name here as `secretName` and corresponding data key
+  ## the name here as `secretName` and corresponding data key as secretKey
+  # secretName: yourSecret
   secretKey: auth
 
 server:
   # for a list of options see: https://github.com/pypiserver/pypiserver
-  extraArgs:
-    []
+  extraArgs: []
     # - --disable-fallback
     # - --log-conf=/path/to/file
 

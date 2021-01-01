@@ -39,7 +39,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["pypi-server"]
           args:
-            - --passwords=/config/passwords
+            - --passwords={{if eq .Values.auth.actions "." }}.{{ else }}/config/passwords{{ end }}
             - --authenticate={{ .Values.auth.actions }}
             - --port=8080
             {{- range .Values.server.extraArgs }}
@@ -49,9 +49,11 @@ spec:
           volumeMounts:
             - mountPath: /data/packages
               name: packages
+            {{- if ne .Values.auth.actions "." }}
             - mountPath: /config
               name: secrets
               readOnly: true
+            {{- end }}
           ports:
             - name: http
               containerPort: 8080
@@ -73,6 +75,7 @@ spec:
           resources:
             {{- toYaml .Values.container.resources | nindent 12 }}
       volumes:
+        {{- if ne .Values.auth.actions "." }}
         - name: secrets
           secret:
             defaultMode: 420
@@ -80,6 +83,7 @@ spec:
             - key: {{ .Values.auth.secretKey }}
               path: passwords
             secretName: {{ .Values.auth.secretName | default (include "pypiServer.fullname" .) }}
+        {{- end }}
         - name: packages
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.existingClaim | default (include "pypiServer.fullname" .) }}
